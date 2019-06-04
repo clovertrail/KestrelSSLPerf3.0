@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace kestrelssl.Controller
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/v1/hubs")]
     [Consumes("application/json")]
-    public class HubProxy : Microsoft.AspNetCore.Mvc.Controller
+    public class HubProxy : Microsoft.AspNetCore.Mvc.ControllerBase //Microsoft.AspNetCore.Mvc.Controller
     {
         // POST /api/v1/hubs/chat/users/1
         [HttpPost("{hub}/users/{id}")]

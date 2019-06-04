@@ -39,7 +39,7 @@ namespace kestrelssl
             validationParams.LifetimeValidator =
                 (before, expires, token, parameters) => true; // skip validation
 
-            validationParams.ValidateAudience = true;
+            validationParams.ValidateAudience = false;
             validationParams.AudienceValidator = AudienceValidator;
 
             validationParams.ValidateIssuerSigningKey = false;

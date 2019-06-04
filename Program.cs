@@ -67,7 +67,14 @@ namespace aspnetcoredemo
                     if (!string.IsNullOrEmpty(localCertPath))
                     {
                         // Use a local cert
-                        cert = new X509Certificate2(localCertPath, passwd);
+			if (!string.IsNullOrEmpty(passwd))
+			{
+                            cert = new X509Certificate2(localCertPath, passwd);
+			}
+			else
+			{
+			    cert = new X509Certificate2(localCertPath);
+			}
                     }
                     if (cert == null)
                     {
